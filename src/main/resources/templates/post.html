@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog :: Post</title>
+</head>
+<body>
+
+<div class="container">
+    <h1><a th:href="@{'/'}">blogCo</a></h1>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="post">
+                <h2 th:text="${post.title}">Title</h2>
+                <h5 th:text=" 'Written by ' + ${post.account.firstName}">Account First Name</h5>
+                <h5 th:text=" 'Created on ' + ${post.createdAt}">Created At</h5>
+                <p th:text="${post.body}">body text</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

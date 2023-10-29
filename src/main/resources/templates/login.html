@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog :: Login</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="post">
+        <h1><a th:href="@{'/'}">blogCo</a></h1>
+        <div>
+          <h3 class="form-group"> Sign In </h3>
+        </div>
+        <form action="#"
+          th:action="@{/login}"
+          method="POST">
+          <div class="form-group">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <label for="email">Email</label>
+            <input id="email" type="text" name="email" placeholder="Enter your email" required/>
+          </div>
+
+          <div class="form-group">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <label for="password">Email</label>
+            <input id="password" type="text" name="password" placeholder="password" required/>
+          </div>
+          <div class="form-group">
+            <input type="submit" name="Sign In" value="continue" th:href="@{/login}"/>
+          </div>
+          <hr />
+          <ul>
+            <li> Don't have an account? <a th:href="@{/register}">Sign Up</a></li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
